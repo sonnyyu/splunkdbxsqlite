@@ -31,7 +31,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 
 cd /opt/splunk/bin
 wget https://www.dropbox.com/s/djjn9to4b4r3fy6/splunk-db-connect_314.tgz
-./splunk install app splunk-db-connect_314.tgz
+./splunk install app splunk-db-connect_314.tgz  -auth admin:${PLUNK_PASSWORD}
 ./splunk restart
 
 mkdir -p /opt/splunk/etc/apps/splunk_app_db_connect/local/
