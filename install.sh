@@ -32,6 +32,7 @@ source /etc/environment
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 fi
 
+if [[ "$INSTALL_DBX" == "1" ]]; then
 cd /opt/splunk/bin
 wget https://www.dropbox.com/s/djjn9to4b4r3fy6/splunk-db-connect_314.tgz
 ./splunk install app splunk-db-connect_314.tgz  -auth admin:${PLUNK_PASSWORD}
@@ -84,5 +85,6 @@ curl -k -X POST -u admin:Pass2w0rd~ https://localhost:8089/servicesNS/nobody/spl
 cd /opt/splunk/bin
 ./splunk restart
 
+fi
 echo "completed"
 exit
