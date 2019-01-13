@@ -4,8 +4,13 @@
 set -x
 exec > >(sudo tee install.log)
 exec 2>&1
+INSTALL_SPLUNK=1
+INSTALL_JAVA=1
+INSTALL_DBX=1
+INSTALL_MYSQL=1
+PLUNK_PASSWORD="password"
 
-PLUNK_PASSWORD="Pass2w0rd~"
+
 
 
 wget -O splunk-7.2.3-06d57c595b80-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.2.3&product=splunk&filename=splunk-7.2.3-06d57c595b80-linux-2.6-amd64.deb&wget=true'
