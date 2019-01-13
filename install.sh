@@ -75,6 +75,9 @@ jdbcUrlFormat = jdbc:sqlite:<database>
 jdbcUseSSL = 0
 EOF
 
+curl -k -X POST -u admin:Pass2w0rd~ https://localhost:8089/servicesNS/nobody/splunk_app_db_connect/db_connect/dbxproxy/identities -d \
+"{\"name\":\"sonnyyu\",\"username\":\"sonnyyu\",\"password\":null,\"disabled\":false,\"domain_name\":null,\"use_win_auth\":false}"
+
 cd /opt/splunk/bin
 ./splunk restart
 
